@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <form #f="ngForm" (ngSubmit)="guardar( f )">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nombre </label>
+        <input type="text"
+               name="id"
+               hidden [(ngModel)]="formServicio.id">
+        <input type="text" class="form-control"
+               [(ngModel)]="formServicio.nombre"
+               required
+               name="nombre" placeholder="Ingrese nombre">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Descripcion</label>
+        <input type="text"
+               required
+               [(ngModel)]="formServicio.descripcion"
+               name="descripcion"
+               class="form-control" placeholder="Ingrese Descripcion">
+      </div>
+      <button type="submit"
+              class="btn btn-outline-primary" >Grabar</button>
+      <button type="reset" class="btn btn-outline-danger">Cancelar</button>
+    </form>
+  </div>
+</div>

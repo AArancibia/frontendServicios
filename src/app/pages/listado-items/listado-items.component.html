@@ -1,0 +1,21 @@
+<div class="row mt-5">
+  <div class="col-md-9">
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let servicio of dataServicios">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ servicio.nombre }}</h5>
+            <p class="card-text">{{ servicio.descripcion }}</p>
+          </div>
+          <div class="bg-light p-4">
+            <a (click)="enviarDatos( servicio )" class="card-link text-info">Editar</a>
+            <a (click)="eliminarDatos( servicio.id )" class="card-link text-info">Eliminar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <app-form [formServicio]="servicio"></app-form>
+  </div>
+</div>
